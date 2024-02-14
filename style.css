@@ -74,6 +74,17 @@ html, body {
     gap: 30px;
 }
 
+.announcements-grid, 
+.trending-grid {
+    display: grid;
+    grid-template: repeat(3, 1fr) / 1fr;
+
+    & .section:not(:last-child) {
+        border-bottom: 1px solid black;
+    }
+
+}
+
 .title {
     grid-column: 1 / -1;
 }
@@ -81,5 +92,5 @@ html, body {
 .card {
     background-color: white;
     border-radius: 10px;
-    padding: var(--std-padding);
+    padding: 30px;
 }

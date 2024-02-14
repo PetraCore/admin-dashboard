@@ -17,6 +17,10 @@ html, body {
 
     display: grid;
     grid-template: 1fr 2fr / 4fr 3fr;
+
+    & .options {
+        border: 1px solid green;
+    }
 }
 
 .search {
@@ -31,13 +35,20 @@ html, body {
     border: 1px solid green;
 }
 
-.options {
-    border: 1px solid green;
-}
-
 .sidebar {
     background-color: cornflowerblue;
     grid-row: 1 / -1;
+
+    display: grid;
+    grid-template: 1fr 4fr 6fr / 1fr;
+
+    & .options {
+        border: 1px solid blue;
+    }
+}
+
+.logo {
+    background-color: 1px solid blue;
 }
 
 .main {

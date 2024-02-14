@@ -14,6 +14,25 @@ html, body {
 .header {
     grid-column: 2;
     background-color: aquamarine;
+
+    display: grid;
+    grid-template: 1fr 2fr / 4fr 3fr;
+}
+
+.search {
+    border: 1px solid green;
+}
+
+.account {
+    border: 1px solid green;
+}
+
+.welcome {
+    border: 1px solid green;
+}
+
+.options {
+    border: 1px solid green;
 }
 
 .sidebar {

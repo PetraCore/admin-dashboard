@@ -33,6 +33,14 @@ html, body {
 
 .account {
     border: 1px solid green;
+    display: grid;
+    grid-template: 1fr / repeat(3, min-content);
+    align-items: center;
+    justify-content: end;
+    gap: var(--std-padding);
+
+    font-size: 1.2rem;
+    font-weight: bold;
 
     & svg,
     & div {
@@ -40,8 +48,34 @@ html, body {
     }
 }
 
+.profile {
+    display: grid;
+    grid-template: 1fr / min-content 1fr;
+    align-items: center;
+    gap: 15px;
+}
+
+.aside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: min-content;
+    gap: 5px;
+
+    & .user {
+        font-weight: bold;
+    }
+}
+
 .welcome {
     border: 1px solid green;
+
+    & .profile {
+        font-size: 1.2rem;
+        font-weight: bold;
+        & .user {
+            font-size: 1.4em;
+        }
+    }
 }
 
 .sidebar {
@@ -92,15 +126,13 @@ html, body {
     gap: 30px;
 }
 
-.announcements-grid, 
-.trending-grid {
+.announcements-grid {
     display: grid;
     grid-template: repeat(3, 1fr) / 1fr;
 
     & .section:not(:last-child) {
         border-bottom: 1px solid black;
     }
-
 }
 
 .title {
@@ -112,6 +144,9 @@ html, body {
     border-radius: 10px;
     padding: 30px;
 
+    display: grid;
+    gap: var(--std-padding);
+
     & .options {
         display: grid;
         grid-auto-flow: column;
@@ -121,4 +156,12 @@ html, body {
         gap: 2ch;
         font-size: 1.5rem;
     }
+}
+
+.attribution {
+    display: block;
+    margin-top: var(--std-padding);
+    text-align: center;
+
+    color: inherit;
 }

@@ -38,6 +38,28 @@ input[type='search'] {
 
     & .options {
         border: 1px solid green;
+        & ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+
+            & li {
+                flex: 0 1 auto;
+                display: grid;
+                align-items: center;
+                justify-items: center;
+
+                min-width: 100px;
+                padding: 10px;
+                border-radius: 20px;
+                background-color: white;
+            }
+        }
     }
 }
 

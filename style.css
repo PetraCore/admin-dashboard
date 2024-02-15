@@ -9,8 +9,8 @@ html, body {
 }
 
 input[type='search'] {
-    width: clamp(100px, 90%, 500px);
-    height: 1.5em;
+    width: 90%;
+    height: 2em;
     padding: 0 1ch;
     border: none;
     border-radius: 20px;
@@ -25,19 +25,20 @@ input[type='search'] {
     height: 100%;
 
     display: grid;
-    grid-template: 1fr 4fr / 1fr 4fr;
+    grid-template: 2fr 4fr / 1fr 4fr;
 }
 
 .header {
     grid-column: 2;
     background-color: aquamarine;
+    padding: 15px 40px; 
 
     display: grid;
-    grid-template: 1fr 2fr / 4fr 3fr;
+    gap: var(--std-padding) 0;
+    grid-template: 1fr 1fr / 1fr 1fr;
     align-items: center;
 
     & .options {
-        border: 1px solid green;
         & ul {
             margin: 0;
             padding: 0;
@@ -45,7 +46,7 @@ input[type='search'] {
 
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: flex-end;
             gap: 30px;
 
             & li {
@@ -64,14 +65,13 @@ input[type='search'] {
 }
 
 .search {
-    border: 1px solid green;
+    padding: var(--std-padding);
     & svg {
         vertical-align: middle;
     }
 }
 
 .account {
-    border: 1px solid green;
     display: grid;
     grid-template: 1fr / repeat(3, min-content);
     align-items: center;
@@ -106,8 +106,6 @@ input[type='search'] {
 }
 
 .welcome {
-    border: 1px solid green;
-
     & .profile {
         font-size: 1.2rem;
         font-weight: bold;

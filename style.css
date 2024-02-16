@@ -116,32 +116,42 @@ input[type='search'] {
 }
 
 .sidebar {
+    padding:  10px var(--std-padding);
     background-color: cornflowerblue;
     color: white;
     grid-row: 1 / -1;
 
     display: grid;
-    grid-template: 1fr 4fr 6fr / 1fr;
+    grid-template: auto 1fr / 1fr;
+    gap: 30px;
 
     & .options {
-        border: 1px solid blue;
-
         & ul {
             list-style: none;
+            margin: 0;
+            margin-left: 12px;
+            padding: 0;
             font-size: 1.5rem;
             font-weight: bold;
+
+            display: grid;
+            gap: 25px;
+
+            & li {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                align-items: center;
+                gap: var(--std-padding);
+            }
         }
     }
 }
 
 .logo {
-    background-color: 1px solid blue;
-
-    & svg,
-    & h1 {
-        display: inline-block;
-        vertical-align: middle;
-    }
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10px;
 }
 
 .main {

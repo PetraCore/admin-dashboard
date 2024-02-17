@@ -66,6 +66,12 @@ input[type='search'] {
                 background-color: #0c4a6e;
                 color: #e0f2fe;
                 font-weight: bold;
+
+                &:hover {
+                    background-color: #f97855;
+                    color: #f6e7e1;
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -94,6 +100,11 @@ input[type='search'] {
     }
 }
 
+.notification-bell:hover {
+    cursor: pointer;
+    color: #0ea5e9;
+}
+
 .profile {
     display: grid;
     grid-template: 1fr / min-content 1fr;
@@ -110,6 +121,20 @@ input[type='search'] {
     & .user {
         font-weight: bold;
     }
+}
+
+.user:hover {
+    cursor: pointer;
+    color:#0ea5e9;
+}
+
+.avatar:hover {
+    cursor: pointer;
+}
+
+.project-name:hover {
+    cursor: pointer;
+    color: #f97855;
 }
 
 .welcome {
@@ -149,6 +174,11 @@ input[type='search'] {
                 grid-template-columns: auto 1fr;
                 align-items: center;
                 gap: var(--std-padding);
+
+                &:hover {
+                    color: #0ea5e9;
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -160,6 +190,10 @@ input[type='search'] {
     align-items: center;
     gap: 10px;
     color: #f8fafc;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .main {
@@ -215,6 +249,11 @@ input[type='search'] {
         align-items: center;
         gap: 2ch;
         font-size: 1.5rem;
+
+        & svg:hover {
+            color: #f97855;
+            cursor: pointer;
+        }
     }
     
     & .section *:last-child {
@@ -227,10 +266,19 @@ input[type='search'] {
     }
 }
 
+.announcement-title:hover {
+    cursor: pointer;
+    color: #0ea5e9;
+}
+
 .attribution {
     display: block;
     margin-top: var(--std-padding);
     text-align: center;
 
     color: inherit;
+
+    &:hover {
+        color: #0ea5e9;
+    }
 }
